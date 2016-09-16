@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>iTunes</title>
+    <style>
+      body {
+        background-color:#e7e7e7;
+      }
+      div {
+        position: fixed;
+        width: 100px;
+        bottom: 50%;
+        left: calc(50% - 50px);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="start">▶︎</button>
+      <button id="stop">■</button>
+    </div>
+    <script>
+      Application = require('jxa').Application
+      iTunes = Application('iTunes')
+      document.getElementById('start').addEventListener('click', ()=>{
+        iTunes.play()
+      })
+      document.getElementById('stop').addEventListener('click', ()=>{
+        iTunes.pause()
+      })
+    </script>
+  </body>
+</html>
+
